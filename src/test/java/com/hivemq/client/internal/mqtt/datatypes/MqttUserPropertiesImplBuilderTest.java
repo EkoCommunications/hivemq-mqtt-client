@@ -24,7 +24,8 @@ import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
-import java.util.stream.Stream;
+import java9.util.stream.Stream;
+import java9.util.stream.StreamSupport;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
@@ -164,7 +165,7 @@ class MqttUserPropertiesImplBuilderTest {
         userProperties.add(userProperty2);
         userProperties.add(userProperty3);
 
-        final Mqtt5UserProperties properties = Mqtt5UserProperties.builder().addAll(userProperties.stream()).build();
+        final Mqtt5UserProperties properties = Mqtt5UserProperties.builder().addAll(StreamSupport.stream(userProperties)).build();
 
         final List<? extends Mqtt5UserProperty> mqtt5UserProperties = properties.asList();
 

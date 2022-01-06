@@ -28,7 +28,7 @@ import com.hivemq.client.mqtt.mqtt3.message.subscribe.Mqtt3SubscriptionBuilder;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.function.Function;
+import java9.util.function.Function;
 
 /**
  * @author Silvio Giebl

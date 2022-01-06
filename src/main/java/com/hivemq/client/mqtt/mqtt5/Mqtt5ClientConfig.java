@@ -24,7 +24,7 @@ import com.hivemq.client.mqtt.mqtt5.message.auth.Mqtt5SimpleAuth;
 import com.hivemq.client.mqtt.mqtt5.message.publish.Mqtt5WillPublish;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * Configuration of an {@link Mqtt5Client}.

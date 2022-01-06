@@ -91,10 +91,10 @@ public class MqttClientInterceptors implements Mqtt5ClientInterceptors {
 
     @Override
     public int hashCode() {
-        int result = Objects.hashCode(incomingQos1Interceptor);
-        result = 31 * result + Objects.hashCode(outgoingQos1Interceptor);
-        result = 31 * result + Objects.hashCode(incomingQos2Interceptor);
-        result = 31 * result + Objects.hashCode(outgoingQos2Interceptor);
+        int result = java9.util.Objects.hashCode(incomingQos1Interceptor);
+        result = 31 * result + java9.util.Objects.hashCode(outgoingQos1Interceptor);
+        result = 31 * result + java9.util.Objects.hashCode(incomingQos2Interceptor);
+        result = 31 * result + java9.util.Objects.hashCode(outgoingQos2Interceptor);
         return result;
     }
 }

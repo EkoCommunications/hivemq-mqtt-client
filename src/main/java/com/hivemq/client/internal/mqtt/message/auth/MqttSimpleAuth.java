@@ -26,7 +26,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.nio.ByteBuffer;
 import java.util.Objects;
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * @author Silvio Giebl
@@ -85,8 +85,8 @@ public class MqttSimpleAuth implements Mqtt5SimpleAuth {
 
     @Override
     public int hashCode() {
-        int result = Objects.hashCode(username);
-        result = 31 * result + Objects.hashCode(password);
+        int result = java9.util.Objects.hashCode(username);
+        result = 31 * result + java9.util.Objects.hashCode(password);
         return result;
     }
 }

@@ -23,7 +23,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.net.InetSocketAddress;
 import java.util.Objects;
-import java.util.Optional;
+
+import java9.lang.Integers;
+import java9.util.Optional;
 
 /**
  * @author Silvio Giebl
@@ -140,12 +142,12 @@ public class MqttClientTransportConfigImpl implements MqttClientTransportConfig 
     @Override
     public int hashCode() {
         int result = serverAddress.hashCode();
-        result = 31 * result + Objects.hashCode(localAddress);
-        result = 31 * result + Objects.hashCode(sslConfig);
-        result = 31 * result + Objects.hashCode(webSocketConfig);
-        result = 31 * result + Objects.hashCode(proxyConfig);
-        result = 31 * result + Integer.hashCode(socketConnectTimeoutMs);
-        result = 31 * result + Integer.hashCode(mqttConnectTimeoutMs);
+        result = 31 * result + java9.util.Objects.hashCode(localAddress);
+        result = 31 * result + java9.util.Objects.hashCode(sslConfig);
+        result = 31 * result + java9.util.Objects.hashCode(webSocketConfig);
+        result = 31 * result + java9.util.Objects.hashCode(proxyConfig);
+        result = 31 * result + Integers.hashCode(socketConnectTimeoutMs);
+        result = 31 * result + Integers.hashCode(mqttConnectTimeoutMs);
         return result;
     }
 }

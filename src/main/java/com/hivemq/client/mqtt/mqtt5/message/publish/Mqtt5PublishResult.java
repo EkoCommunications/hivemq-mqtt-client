@@ -23,7 +23,7 @@ import com.hivemq.client.mqtt.mqtt5.message.publish.pubrec.Mqtt5PubRec;
 import com.hivemq.client.mqtt.mqtt5.message.publish.pubrel.Mqtt5PubRel;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * Result for an {@link Mqtt5Publish MQTT 5 Publish message} sent by the client.

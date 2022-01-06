@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.net.InetSocketAddress;
 import java.util.List;
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * Configuration of an {@link MqttClient}.

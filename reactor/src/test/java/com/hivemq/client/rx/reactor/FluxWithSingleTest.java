@@ -38,7 +38,7 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.stream.Stream;
+import java9.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 

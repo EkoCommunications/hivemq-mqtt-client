@@ -31,6 +31,7 @@ import com.hivemq.client.internal.mqtt.ioc.ClientScope;
 import com.hivemq.client.internal.mqtt.message.MqttCommonReasonCode;
 import com.hivemq.client.internal.mqtt.message.subscribe.MqttStatefulSubscribe;
 import com.hivemq.client.internal.mqtt.message.subscribe.MqttSubscribe;
+import com.hivemq.client.internal.mqtt.message.subscribe.MqttSubscription;
 import com.hivemq.client.internal.mqtt.message.subscribe.suback.MqttSubAck;
 import com.hivemq.client.internal.mqtt.message.unsubscribe.MqttStatefulUnsubscribe;
 import com.hivemq.client.internal.mqtt.message.unsubscribe.MqttUnsubscribe;
@@ -49,11 +50,15 @@ import com.hivemq.client.mqtt.mqtt5.message.subscribe.suback.Mqtt5SubAckReasonCo
 import com.hivemq.client.mqtt.mqtt5.message.unsubscribe.unsuback.Mqtt5UnsubAckReasonCode;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.EventLoop;
+import java9.util.Maps;
+import java9.util.function.BiConsumer;
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.inject.Inject;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @author Silvio Giebl
@@ -101,7 +106,7 @@ public class MqttSubscriptionHandler extends MqttSessionAwareHandler implements 
         subscriptionIdentifiersAvailable = connectionConfig.areSubscriptionIdentifiersAvailable();
 
         if (!hasSession) {
-            incomingPublishFlows.getSubscriptions().forEach((subscriptionIdentifier, subscriptions) -> {
+            Maps.forEach(incomingPublishFlows.getSubscriptions(), (subscriptionIdentifier, subscriptions) -> {
                 final MqttSubscribe subscribe = new MqttSubscribe(ImmutableList.copyOf(subscriptions),
                         MqttUserPropertiesImpl.NO_USER_PROPERTIES);
                 pending.addFirst(new MqttSubscribeWithFlow(subscribe, subscriptionIdentifier, null));

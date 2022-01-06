@@ -27,8 +27,8 @@ import com.hivemq.client.mqtt.mqtt5.message.Mqtt5MessageType;
 import org.jetbrains.annotations.NotNull;
 
 import java.nio.ByteBuffer;
-import java.util.Optional;
-import java.util.OptionalLong;
+import java9.util.Optional;
+import java9.util.OptionalLong;
 
 /**
  * MQTT 5 Publish message. This message is translated from and to an MQTT 5 PUBLISH packet.

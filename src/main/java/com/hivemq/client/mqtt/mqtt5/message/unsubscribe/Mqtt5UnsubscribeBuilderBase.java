@@ -26,7 +26,7 @@ import com.hivemq.client.mqtt.mqtt5.message.subscribe.Mqtt5Subscribe;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
-import java.util.stream.Stream;
+import java9.util.stream.Stream;
 
 /**
  * Builder base for a {@link Mqtt5Unsubscribe}.

@@ -26,9 +26,9 @@ import com.hivemq.client.mqtt.mqtt3.message.connect.Mqtt3ConnectBuilder;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.concurrent.CompletableFuture;
+import java9.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.function.BiConsumer;
+import java9.util.function.BiConsumer;
 
 /**
  * A {@link MqttClientReconnector} with methods specific to an {@link com.hivemq.client.mqtt.mqtt3.Mqtt3Client

@@ -28,8 +28,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
-import java.util.function.Function;
-import java.util.stream.Stream;
+import java9.util.function.Function;
+import java9.util.stream.Stream;
 
 /**
  * @author Silvio Giebl

@@ -22,7 +22,7 @@ import com.hivemq.client.mqtt.lifecycle.MqttClientReconnector;
 import com.hivemq.client.mqtt.lifecycle.MqttDisconnectSource;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.concurrent.ThreadLocalRandom;
+import java9.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 /**

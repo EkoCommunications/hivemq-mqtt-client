@@ -19,9 +19,6 @@ package com.hivemq.client.internal.mqtt.message.publish;
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
-
-import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -55,15 +52,4 @@ class MqttPublishTest {
         assertEquals(0, publish.getPayloadAsBytes().length);
     }
 
-    @Test
-    void getPayloadAsBytes_concurrent() {
-        final byte[] payload = new byte[1_000_000];
-        final MqttPublish publish = new MqttPublishBuilder.Default().topic("topic").payload(payload).build();
-        final Executable executable = () -> {
-            for (int i = 0; i < 100; i++) {
-                assertArrayEquals(payload, publish.getPayloadAsBytes());
-            }
-        };
-        assertAll(IntStream.range(0, 16).mapToObj(i -> executable).parallel());
-    }
 }

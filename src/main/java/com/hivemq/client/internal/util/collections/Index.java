@@ -23,8 +23,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
-import java.util.function.Consumer;
-import java.util.function.Function;
+import java9.util.function.Consumer;
+import java9.util.function.Function;
 
 /**
  * @author Silvio Giebl

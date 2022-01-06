@@ -29,8 +29,8 @@ import com.hivemq.client.mqtt.mqtt5.message.disconnect.Mqtt5DisconnectReasonCode
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.function.Consumer;
-import java.util.function.Function;
+import java9.util.function.Consumer;
+import java9.util.function.Function;
 
 /**
  * @author Silvio Giebl

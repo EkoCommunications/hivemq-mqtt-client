@@ -26,8 +26,8 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLHandshakeException;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
+import java9.util.function.BiConsumer;
+import java9.util.function.Consumer;
 
 /**
  * @author Silvio Giebl

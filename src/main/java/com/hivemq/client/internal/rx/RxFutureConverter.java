@@ -21,10 +21,10 @@ import io.reactivex.disposables.Disposable;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
+import java9.util.Optional;
+import java9.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.BiConsumer;
+import java9.util.function.BiConsumer;
 
 /**
  * @author Silvio Giebl

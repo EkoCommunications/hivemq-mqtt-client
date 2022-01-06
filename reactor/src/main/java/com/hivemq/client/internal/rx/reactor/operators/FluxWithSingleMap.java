@@ -28,7 +28,7 @@ import reactor.core.Exceptions;
 import reactor.core.Fuseable;
 import reactor.util.context.Context;
 
-import java.util.function.Function;
+import java9.util.function.Function;
 
 /**
  * @author Silvio Giebl

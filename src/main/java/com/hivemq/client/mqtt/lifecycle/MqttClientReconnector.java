@@ -23,9 +23,9 @@ import com.hivemq.client.mqtt.MqttClientTransportConfigBuilder;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.concurrent.CompletableFuture;
+import java9.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.function.BiConsumer;
+import java9.util.function.BiConsumer;
 
 /**
  * A reconnector is supplied by a {@link MqttClientDisconnectedContext} and can be used for reconnecting.

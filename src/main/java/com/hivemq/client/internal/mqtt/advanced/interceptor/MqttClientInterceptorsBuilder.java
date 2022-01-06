@@ -24,7 +24,7 @@ import com.hivemq.client.mqtt.mqtt5.advanced.interceptor.qos2.Mqtt5OutgoingQos2I
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.function.Function;
+import java9.util.function.Function;
 
 /**
  * @author Silvio Giebl

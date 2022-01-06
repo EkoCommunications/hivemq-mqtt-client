@@ -46,7 +46,7 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
-import java.util.concurrent.CompletableFuture;
+import java9.util.concurrent.CompletableFuture;
 
 import static com.hivemq.client.internal.mqtt.message.connect.MqttConnectRestrictions.DEFAULT;
 import static org.junit.jupiter.api.Assertions.assertThrows;

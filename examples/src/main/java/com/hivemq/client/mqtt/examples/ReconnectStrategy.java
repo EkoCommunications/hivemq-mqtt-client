@@ -21,7 +21,7 @@ import com.hivemq.client.mqtt.mqtt5.Mqtt5Client;
 import com.hivemq.client.mqtt.mqtt5.lifecycle.Mqtt5ClientDisconnectedContext;
 
 import java.time.LocalTime;
-import java.util.concurrent.CompletableFuture;
+import java9.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
 /**

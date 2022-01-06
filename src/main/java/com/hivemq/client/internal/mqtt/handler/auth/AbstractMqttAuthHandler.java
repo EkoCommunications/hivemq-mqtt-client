@@ -35,11 +35,11 @@ import io.netty.channel.ChannelHandlerContext;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.concurrent.CompletableFuture;
+import java9.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
+import java9.util.function.BiConsumer;
+import java9.util.function.Consumer;
+import java9.util.function.Supplier;
 
 import static com.hivemq.client.mqtt.mqtt5.message.auth.Mqtt5AuthReasonCode.CONTINUE_AUTHENTICATION;
 

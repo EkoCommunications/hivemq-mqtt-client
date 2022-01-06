@@ -24,7 +24,9 @@ import org.jetbrains.annotations.Nullable;
 import javax.net.ssl.*;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
+
+import java9.lang.Integers;
+import java9.util.Optional;
 
 /**
  * @author David Katz
@@ -145,12 +147,12 @@ public class MqttClientSslConfigImpl implements MqttClientSslConfig {
 
     @Override
     public int hashCode() {
-        int result = Objects.hashCode(keyManagerFactory);
-        result = 31 * result + Objects.hashCode(trustManagerFactory);
-        result = 31 * result + Objects.hashCode(cipherSuites);
-        result = 31 * result + Objects.hashCode(protocols);
-        result = 31 * result + Integer.hashCode(handshakeTimeoutMs);
-        result = 31 * result + Objects.hashCode(hostnameVerifier);
+        int result = java9.util.Objects.hashCode(keyManagerFactory);
+        result = 31 * result + java9.util.Objects.hashCode(trustManagerFactory);
+        result = 31 * result + java9.util.Objects.hashCode(cipherSuites);
+        result = 31 * result + java9.util.Objects.hashCode(protocols);
+        result = 31 * result + Integers.hashCode(handshakeTimeoutMs);
+        result = 31 * result + java9.util.Objects.hashCode(hostnameVerifier);
         return result;
     }
 }

@@ -32,6 +32,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
+import java9.util.Comparators;
+import java9.util.Maps;
+
 /**
  * @author Silvio Giebl
  */
@@ -113,7 +116,7 @@ public class MqttSubscribedPublishFlowTree implements MqttSubscribedPublishFlows
     @Override
     public @NotNull Map<@NotNull Integer, @NotNull List<@NotNull MqttSubscription>> getSubscriptions() {
         // we sort in reverse order of subscription identifiers so that newer subscriptions are first
-        final Map<Integer, List<MqttSubscription>> map = new TreeMap<>(Comparator.reverseOrder());
+        final Map<Integer, List<MqttSubscription>> map = new TreeMap<>(Comparators.reverseOrder());
         if (rootNode != null) {
             final Queue<IteratorNode> nodes = new LinkedList<>();
             nodes.add(new IteratorNode(rootNode, null));
@@ -579,7 +582,7 @@ public class MqttSubscribedPublishFlowTree implements MqttSubscribedPublishFlows
                             MqttSubscription.decodeRetainAsPublished(entry.subscriptionOptions);
                     final MqttSubscription subscription =
                             new MqttSubscription(topicFilter, qos, noLocal, retainHandling, retainAsPublished);
-                    map.computeIfAbsent(entry.subscriptionIdentifier, k -> new LinkedList<>()).add(subscription);
+                    Maps.computeIfAbsent(map, entry.subscriptionIdentifier, k -> new LinkedList<>()).add(subscription);
                 }
             }
         }

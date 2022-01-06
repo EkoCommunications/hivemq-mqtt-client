@@ -22,8 +22,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
-import java.util.Optional;
-import java.util.OptionalInt;
+import java9.util.Optional;
+import java9.util.OptionalInt;
 import java.util.concurrent.Executor;
 
 /**
@@ -93,7 +93,7 @@ public class MqttClientExecutorConfigImpl implements MqttClientExecutorConfig {
 
     @Override
     public int hashCode() {
-        int result = Objects.hashCode(nettyExecutor);
+        int result = java9.util.Objects.hashCode(nettyExecutor);
         result = 31 * result + nettyThreads;
         result = 31 * result + applicationScheduler.hashCode();
         return result;

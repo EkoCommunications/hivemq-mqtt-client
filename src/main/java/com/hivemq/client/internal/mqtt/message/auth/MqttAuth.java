@@ -29,7 +29,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.nio.ByteBuffer;
 import java.util.Objects;
-import java.util.Optional;
+
+import java9.util.Optional;
 
 /**
  * @author Silvio Giebl
@@ -96,7 +97,7 @@ public class MqttAuth extends MqttMessageWithUserProperties.WithReason.WithCode<
     public int hashCode() {
         int result = partialHashCode();
         result = 31 * result + method.hashCode();
-        result = 31 * result + Objects.hashCode(data);
+        result = 31 * result + java9.util.Objects.hashCode(data);
         return result;
     }
 }

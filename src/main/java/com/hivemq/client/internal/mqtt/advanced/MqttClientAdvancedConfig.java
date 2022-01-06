@@ -82,7 +82,7 @@ public class MqttClientAdvancedConfig implements Mqtt5ClientAdvancedConfig {
     public int hashCode() {
         int result = Boolean.hashCode(allowServerReAuth);
         result = 31 * result + Boolean.hashCode(validatePayloadFormat);
-        result = 31 * result + Objects.hashCode(interceptors);
+        result = 31 * result + java9.util.Objects.hashCode(interceptors);
         return result;
     }
 }

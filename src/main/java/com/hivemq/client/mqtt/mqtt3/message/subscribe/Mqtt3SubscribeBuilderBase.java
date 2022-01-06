@@ -21,7 +21,7 @@ import com.hivemq.client.annotations.DoNotImplement;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
-import java.util.stream.Stream;
+import java9.util.stream.Stream;
 
 /**
  * Builder base for a {@link Mqtt3Subscribe}.

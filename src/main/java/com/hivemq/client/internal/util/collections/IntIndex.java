@@ -22,8 +22,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
-import java.util.function.Consumer;
-import java.util.function.ToIntFunction;
+import java9.util.function.Consumer;
+import java9.util.function.ToIntFunction;
 
 /**
  * @author Silvio Giebl

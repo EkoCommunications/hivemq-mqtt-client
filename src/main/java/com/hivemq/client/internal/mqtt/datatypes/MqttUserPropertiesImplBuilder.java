@@ -26,8 +26,10 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
-import java.util.function.Function;
-import java.util.stream.Stream;
+
+import java9.lang.Iterables;
+import java9.util.function.Function;
+import java9.util.stream.Stream;
 
 /**
  * @author Silvio Giebl
@@ -75,7 +77,7 @@ public abstract class MqttUserPropertiesImplBuilder<B extends MqttUserProperties
     public @NotNull B addAll(final @Nullable Collection<@Nullable ? extends Mqtt5UserProperty> userProperties) {
         Checks.notNull(userProperties, "User Properties");
         listBuilder.ensureFree(userProperties.size());
-        userProperties.forEach(this::add);
+        Iterables.forEach(userProperties, this::add);
         return self();
     }
 

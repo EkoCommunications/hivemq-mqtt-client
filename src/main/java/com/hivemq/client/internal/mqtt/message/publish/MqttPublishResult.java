@@ -25,8 +25,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
-import java.util.Optional;
-import java.util.function.BooleanSupplier;
+import java9.util.Optional;
+import java9.util.function.BooleanSupplier;
 
 /**
  * @author Silvio Giebl
@@ -83,7 +83,7 @@ public class MqttPublishResult implements Mqtt5PublishResult {
     @Override
     public int hashCode() {
         int result = publish.hashCode();
-        result = 31 * result + Objects.hashCode(error);
+        result = 31 * result + java9.util.Objects.hashCode(error);
         return result;
     }
 

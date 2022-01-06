@@ -31,9 +31,11 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
-import java.util.Optional;
-import java.util.OptionalInt;
-import java.util.OptionalLong;
+
+import java9.lang.Longs;
+import java9.util.Optional;
+import java9.util.OptionalInt;
+import java9.util.OptionalLong;
 
 /**
  * @author Silvio Giebl
@@ -177,13 +179,13 @@ public class MqttConnAck extends MqttMessageWithUserProperties.WithReason.WithCo
     public int hashCode() {
         int result = partialHashCode();
         result = 31 * result + Boolean.hashCode(sessionPresent);
-        result = 31 * result + Long.hashCode(sessionExpiryInterval);
+        result = 31 * result + Longs.hashCode(sessionExpiryInterval);
         result = 31 * result + serverKeepAlive;
-        result = 31 * result + Objects.hashCode(assignedClientIdentifier);
-        result = 31 * result + Objects.hashCode(enhancedAuth);
+        result = 31 * result + java9.util.Objects.hashCode(assignedClientIdentifier);
+        result = 31 * result + java9.util.Objects.hashCode(enhancedAuth);
         result = 31 * result + restrictions.hashCode();
-        result = 31 * result + Objects.hashCode(responseInformation);
-        result = 31 * result + Objects.hashCode(serverReference);
+        result = 31 * result + java9.util.Objects.hashCode(responseInformation);
+        result = 31 * result + java9.util.Objects.hashCode(serverReference);
         return result;
     }
 }

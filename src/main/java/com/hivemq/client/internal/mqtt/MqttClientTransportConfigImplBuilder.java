@@ -28,7 +28,7 @@ import org.jetbrains.annotations.Nullable;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
+import java9.util.function.Function;
 
 import static com.hivemq.client.mqtt.MqttClient.*;
 
