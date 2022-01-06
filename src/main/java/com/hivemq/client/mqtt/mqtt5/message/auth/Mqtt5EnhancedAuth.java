@@ -21,7 +21,7 @@ import com.hivemq.client.mqtt.datatypes.MqttUtf8String;
 import org.jetbrains.annotations.NotNull;
 
 import java.nio.ByteBuffer;
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * Data for enhanced authentication and/or authorization.

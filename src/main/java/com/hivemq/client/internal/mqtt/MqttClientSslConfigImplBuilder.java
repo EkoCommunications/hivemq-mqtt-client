@@ -27,7 +27,7 @@ import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.TrustManagerFactory;
 import java.util.Collection;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
+import java9.util.function.Function;
 
 /**
  * @author Silvio Giebl

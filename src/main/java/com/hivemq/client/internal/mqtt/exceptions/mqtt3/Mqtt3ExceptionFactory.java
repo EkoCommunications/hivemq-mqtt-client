@@ -34,7 +34,7 @@ import org.jetbrains.annotations.NotNull;
 public final class Mqtt3ExceptionFactory {
 
     public static final @NotNull Function<Throwable, Throwable> MAPPER = Mqtt3ExceptionFactory::map;
-    public static final @NotNull java.util.function.Function<Throwable, Throwable> MAPPER_JAVA =
+    public static final @NotNull java9.util.function.Function<Throwable, Throwable> MAPPER_JAVA =
             Mqtt3ExceptionFactory::map;
 
     public static @NotNull Throwable map(final @NotNull Throwable throwable) {

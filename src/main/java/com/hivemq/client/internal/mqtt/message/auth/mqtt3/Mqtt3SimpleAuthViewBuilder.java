@@ -25,7 +25,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.nio.ByteBuffer;
-import java.util.function.Function;
+import java9.util.function.Function;
 
 /**
  * @author Silvio Giebl

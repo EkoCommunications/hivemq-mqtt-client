@@ -33,8 +33,8 @@ import javax.inject.Inject;
 import java.net.InetSocketAddress;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
+import java9.util.function.BiConsumer;
+import java9.util.function.Consumer;
 
 /**
  * @author Silvio Giebl

@@ -38,7 +38,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
-import java.util.function.BiFunction;
+import java9.util.function.BiFunction;
 
 /**
  * @author Silvio Giebl

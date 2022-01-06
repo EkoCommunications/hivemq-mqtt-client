@@ -20,6 +20,8 @@ import com.hivemq.client.mqtt.MqttWebSocketConfig;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java9.lang.Integers;
+
 /**
  * @author David Katz
  * @author Christian Hoff
@@ -91,7 +93,7 @@ public class MqttWebSocketConfigImpl implements MqttWebSocketConfig {
         int result = serverPath.hashCode();
         result = 31 * result + queryString.hashCode();
         result = 31 * result + subprotocol.hashCode();
-        result = 31 * result + Integer.hashCode(handshakeTimeoutMs);
+        result = 31 * result + Integers.hashCode(handshakeTimeoutMs);
         return result;
     }
 }

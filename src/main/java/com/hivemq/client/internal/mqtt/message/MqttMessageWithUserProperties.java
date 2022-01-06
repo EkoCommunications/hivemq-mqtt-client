@@ -26,7 +26,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
-import java.util.Optional;
+
+import java9.util.Optional;
 
 /**
  * Base class for MQTT messages with optional User Properties.
@@ -89,7 +90,7 @@ public abstract class MqttMessageWithUserProperties implements MqttMessage.WithU
         }
 
         protected int partialHashCode() {
-            return 31 * super.partialHashCode() + Objects.hashCode(reasonString);
+            return 31 * super.partialHashCode() + java9.util.Objects.hashCode(reasonString);
         }
 
         /**

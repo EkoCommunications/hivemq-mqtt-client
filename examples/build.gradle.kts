@@ -17,4 +17,6 @@ metadata {
 
 dependencies {
     implementation(rootProject)
+    implementation ("net.sourceforge.streamsupport:android-retrostreams:1.7.4")
+    implementation ("net.sourceforge.streamsupport:android-retrofuture:1.7.4")
 }

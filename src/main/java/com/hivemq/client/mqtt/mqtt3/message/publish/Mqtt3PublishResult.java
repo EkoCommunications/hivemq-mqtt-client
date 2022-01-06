@@ -19,7 +19,7 @@ package com.hivemq.client.mqtt.mqtt3.message.publish;
 import com.hivemq.client.annotations.DoNotImplement;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * Result for an {@link Mqtt3Publish MQTT 3 Publish message} sent by the client.

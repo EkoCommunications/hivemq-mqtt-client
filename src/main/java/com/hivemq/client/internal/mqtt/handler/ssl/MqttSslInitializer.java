@@ -30,8 +30,8 @@ import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLException;
 import javax.net.ssl.SSLParameters;
 import java.net.InetSocketAddress;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
+import java9.util.function.BiConsumer;
+import java9.util.function.Consumer;
 
 /**
  * @author Christoph Schäbel

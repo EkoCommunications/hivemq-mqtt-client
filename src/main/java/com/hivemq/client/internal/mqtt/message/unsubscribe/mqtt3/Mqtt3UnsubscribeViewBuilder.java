@@ -29,9 +29,11 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.stream.Stream;
+
+import java9.lang.Iterables;
+import java9.util.function.Consumer;
+import java9.util.function.Function;
+import java9.util.stream.Stream;
 
 /**
  * @author Silvio Giebl
@@ -79,7 +81,7 @@ public abstract class Mqtt3UnsubscribeViewBuilder<B extends Mqtt3UnsubscribeView
     public @NotNull B addTopicFilters(final @Nullable Collection<@Nullable ? extends MqttTopicFilter> topicFilters) {
         Checks.notNull(topicFilters, "Topic Filters");
         topicFiltersBuilder.ensureFree(topicFilters.size());
-        topicFilters.forEach(this::addTopicFilter);
+        Iterables.forEach(topicFilters, this::addTopicFilter);
         ensureAtLeastOneSubscription();
         return self();
     }

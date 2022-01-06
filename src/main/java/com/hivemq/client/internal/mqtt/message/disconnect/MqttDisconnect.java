@@ -28,8 +28,10 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
-import java.util.Optional;
-import java.util.OptionalLong;
+
+import java9.lang.Longs;
+import java9.util.Optional;
+import java9.util.OptionalLong;
 
 /**
  * @author Silvio Giebl
@@ -112,8 +114,8 @@ public class MqttDisconnect extends MqttMessageWithUserProperties.WithReason.Wit
     @Override
     public int hashCode() {
         int result = partialHashCode();
-        result = 31 * result + Long.hashCode(sessionExpiryInterval);
-        result = 31 * result + Objects.hashCode(serverReference);
+        result = 31 * result + Longs.hashCode(sessionExpiryInterval);
+        result = 31 * result + java9.util.Objects.hashCode(serverReference);
         return result;
     }
 }

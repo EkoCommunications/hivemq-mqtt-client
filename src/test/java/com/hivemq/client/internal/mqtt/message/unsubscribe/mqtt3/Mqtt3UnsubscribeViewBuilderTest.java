@@ -23,7 +23,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
+import java9.util.stream.Stream;
+import java9.util.stream.StreamSupport;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -288,7 +289,7 @@ class Mqtt3UnsubscribeViewBuilderTest {
         final ImmutableList<String> topics = ImmutableList.of("test", "list", "element");
 
         final Mqtt3Unsubscribe subscribe =
-                Mqtt3Unsubscribe.builder().addTopicFilters(topics.stream().map(MqttTopicFilter::of)).build();
+                Mqtt3Unsubscribe.builder().addTopicFilters(StreamSupport.stream(topics).map(MqttTopicFilter::of)).build();
 
         final List<? extends MqttTopicFilter> unsubscribeTopics = subscribe.getTopicFilters();
         assertEquals(3, unsubscribeTopics.size());

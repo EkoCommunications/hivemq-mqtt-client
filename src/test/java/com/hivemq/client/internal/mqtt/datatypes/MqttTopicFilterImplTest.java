@@ -31,8 +31,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.function.Function;
-import java.util.stream.Stream;
+import java9.util.function.Function;
+import java9.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 

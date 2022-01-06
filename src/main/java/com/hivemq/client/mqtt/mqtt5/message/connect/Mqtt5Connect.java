@@ -27,7 +27,7 @@ import com.hivemq.client.mqtt.mqtt5.message.auth.Mqtt5SimpleAuth;
 import com.hivemq.client.mqtt.mqtt5.message.publish.Mqtt5WillPublish;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * MQTT 5 Connect message. This message is translated from and to an MQTT 5 CONNECT packet.

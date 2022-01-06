@@ -19,7 +19,7 @@ package com.hivemq.client.util;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.function.Consumer;
+import java9.util.function.Consumer;
 
 /**
  * Util to enable switching over types.

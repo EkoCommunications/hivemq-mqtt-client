@@ -22,7 +22,7 @@ import com.hivemq.client.mqtt.mqtt3.message.auth.Mqtt3SimpleAuth;
 import com.hivemq.client.mqtt.mqtt3.message.publish.Mqtt3Publish;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * Configuration of an {@link Mqtt3Client}.

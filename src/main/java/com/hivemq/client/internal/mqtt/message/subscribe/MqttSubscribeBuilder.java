@@ -32,8 +32,10 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
-import java.util.function.Function;
-import java.util.stream.Stream;
+
+import java9.lang.Iterables;
+import java9.util.function.Function;
+import java9.util.stream.Stream;
 
 /**
  * @author Silvio Giebl
@@ -83,7 +85,7 @@ public abstract class MqttSubscribeBuilder<B extends MqttSubscribeBuilder<B>> {
         Checks.notNull(subscriptions, "Subscriptions");
         buildFirstSubscription();
         subscriptionsBuilder.ensureFree(subscriptions.size());
-        subscriptions.forEach(this::addSubscription);
+        Iterables.forEach(subscriptions, this::addSubscription);
         ensureAtLeastOneSubscription();
         return self();
     }
@@ -199,6 +201,7 @@ public abstract class MqttSubscribeBuilder<B extends MqttSubscribeBuilder<B>> {
 
     public static class Send<P> extends MqttSubscribeBuilder<Send<P>>
             implements Mqtt5SubscribeBuilder.Send.Start.Complete<P> {
+
 
         private final @NotNull Function<? super MqttSubscribe, P> parentConsumer;
 

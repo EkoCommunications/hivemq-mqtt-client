@@ -25,7 +25,7 @@ import com.hivemq.client.mqtt.mqtt5.message.Mqtt5MessageType;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * MQTT 5 SubAck message. This message is translated from and to an MQTT 5 SUBACK packet.

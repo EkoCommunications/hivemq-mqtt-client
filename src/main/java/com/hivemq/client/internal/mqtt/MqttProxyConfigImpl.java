@@ -23,7 +23,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.net.InetSocketAddress;
 import java.util.Objects;
-import java.util.Optional;
+
+import java9.lang.Integers;
+import java9.util.Optional;
 
 /**
  * @author Silvio Giebl
@@ -106,9 +108,9 @@ public class MqttProxyConfigImpl implements MqttProxyConfig {
     public int hashCode() {
         int result = protocol.hashCode();
         result = 31 * result + address.hashCode();
-        result = 31 * result + Objects.hashCode(username);
-        result = 31 * result + Objects.hashCode(password);
-        result = 31 * result + Integer.hashCode(handshakeTimeoutMs);
+        result = 31 * result + java9.util.Objects.hashCode(username);
+        result = 31 * result + java9.util.Objects.hashCode(password);
+        result = 31 * result + Integers.hashCode(handshakeTimeoutMs);
         return result;
     }
 }

@@ -24,7 +24,7 @@ import com.hivemq.client.mqtt.mqtt3.message.subscribe.Mqtt3Subscribe;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
-import java.util.stream.Stream;
+import java9.util.stream.Stream;
 
 /**
  * Builder base for a {@link Mqtt3Unsubscribe}.

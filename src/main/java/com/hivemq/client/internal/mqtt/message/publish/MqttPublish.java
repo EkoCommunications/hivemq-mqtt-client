@@ -35,9 +35,11 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.nio.ByteBuffer;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.OptionalLong;
+
+import java9.lang.Longs;
+import java9.util.Objects;
+import java9.util.Optional;
+import java9.util.OptionalLong;
 
 import static com.hivemq.client.internal.mqtt.message.publish.MqttStatefulPublish.DEFAULT_NO_SUBSCRIPTION_IDENTIFIERS;
 import static com.hivemq.client.internal.mqtt.message.publish.MqttStatefulPublish.DEFAULT_NO_TOPIC_ALIAS;
@@ -250,14 +252,14 @@ public class MqttPublish extends MqttMessageWithUserProperties implements Mqtt5P
     public int hashCode() {
         int result = partialHashCode();
         result = 31 * result + topic.hashCode();
-        result = 31 * result + Objects.hashCode(payload);
+        result = 31 * result + java9.util.Objects.hashCode(payload);
         result = 31 * result + qos.hashCode();
         result = 31 * result + Boolean.hashCode(retain);
-        result = 31 * result + Long.hashCode(messageExpiryInterval);
-        result = 31 * result + Objects.hashCode(payloadFormatIndicator);
-        result = 31 * result + Objects.hashCode(contentType);
-        result = 31 * result + Objects.hashCode(responseTopic);
-        result = 31 * result + Objects.hashCode(correlationData);
+        result = 31 * result + Longs.hashCode(messageExpiryInterval);
+        result = 31 * result + java9.util.Objects.hashCode(payloadFormatIndicator);
+        result = 31 * result + java9.util.Objects.hashCode(contentType);
+        result = 31 * result + java9.util.Objects.hashCode(responseTopic);
+        result = 31 * result + java9.util.Objects.hashCode(correlationData);
         return result;
     }
 }

@@ -32,7 +32,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.nio.ByteBuffer;
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * @author Silvio Giebl
@@ -41,7 +41,7 @@ import java.util.Optional;
 public class Mqtt3PublishView implements Mqtt3Publish {
 
     public static final @NotNull Function<Mqtt5Publish, Mqtt3Publish> MAPPER = Mqtt3PublishView::of;
-    public static final @NotNull java.util.function.Function<Mqtt5Publish, Mqtt3Publish> JAVA_MAPPER =
+    public static final @NotNull java9.util.function.Function<Mqtt5Publish, Mqtt3Publish> JAVA_MAPPER =
             Mqtt3PublishView::of;
 
     public static @NotNull MqttPublish delegate(

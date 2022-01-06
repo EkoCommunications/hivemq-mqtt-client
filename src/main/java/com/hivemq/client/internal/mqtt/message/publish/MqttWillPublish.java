@@ -28,6 +28,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.nio.ByteBuffer;
 
+import java9.lang.Longs;
+
 /**
  * @author Silvio Giebl
  */
@@ -100,7 +102,7 @@ public class MqttWillPublish extends MqttPublish implements Mqtt5WillPublish {
     @Override
     public int hashCode() {
         int result = super.hashCode();
-        result = 31 * result + Long.hashCode(delayInterval);
+        result = 31 * result + Longs.hashCode(delayInterval);
         return result;
     }
 }

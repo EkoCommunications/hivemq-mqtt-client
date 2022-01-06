@@ -21,7 +21,7 @@ import com.hivemq.client.internal.mqtt.MqttClientTransportConfigImplBuilder;
 import org.jetbrains.annotations.NotNull;
 
 import java.net.InetSocketAddress;
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * Configuration for a transport to use by {@link MqttClient MQTT clients}.

@@ -31,7 +31,7 @@ import com.hivemq.client.mqtt.mqtt3.message.publish.Mqtt3Publish;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * @author Silvio Giebl

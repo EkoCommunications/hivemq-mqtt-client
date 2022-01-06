@@ -36,7 +36,9 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.stream.Stream;
+
+import java9.util.concurrent.CompletableFuture;
+import java9.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -469,7 +471,7 @@ class FlowableWithSingleTest {
         final AtomicInteger onNextCounter = new AtomicInteger();
         final AtomicInteger onErrorCounter = new AtomicInteger();
         final AtomicInteger onCompleteCounter = new AtomicInteger();
-        final CompletableFuture<StringBuilder> future =
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future =
                 subscribeSingleFuture(args, flowableWithSingle, onNextCounter, onErrorCounter, onCompleteCounter);
         assertTrue(future.isDone());
         assertFalse(future.isCancelled());
@@ -499,7 +501,7 @@ class FlowableWithSingleTest {
         final AtomicInteger onNextCounter = new AtomicInteger();
         final AtomicInteger onErrorCounter = new AtomicInteger();
         final AtomicInteger onCompleteCounter = new AtomicInteger();
-        final CompletableFuture<StringBuilder> future =
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future =
                 subscribeSingleFuture(args, flowableWithSingle, onNextCounter, onErrorCounter, onCompleteCounter);
         assertTrue(future.isDone());
         assertFalse(future.isCancelled());
@@ -530,7 +532,7 @@ class FlowableWithSingleTest {
         final AtomicInteger onNextCounter = new AtomicInteger();
         final AtomicInteger onErrorCounter = new AtomicInteger();
         final AtomicInteger onCompleteCounter = new AtomicInteger();
-        final CompletableFuture<StringBuilder> future =
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future =
                 subscribeSingleFuture(args, flowableWithSingle, onNextCounter, onErrorCounter, onCompleteCounter);
         assertTrue(future.isDone());
         assertFalse(future.isCancelled());
@@ -564,7 +566,7 @@ class FlowableWithSingleTest {
         final AtomicInteger onErrorCounter = new AtomicInteger();
         final AtomicInteger onCompleteCounter = new AtomicInteger();
         final CountDownLatch latch = new CountDownLatch(3 + ((args >= 3) ? 1 : 0));
-        final CompletableFuture<StringBuilder> future =
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future =
                 subscribeSingleFuture(args, flowableWithSingle, onNextCounter, onErrorCounter, onCompleteCounter,
                         latch);
         assertTimeout(Duration.ofMillis(100), () -> assertEquals("single", future.get().toString()));
@@ -600,7 +602,7 @@ class FlowableWithSingleTest {
         final AtomicInteger onErrorCounter = new AtomicInteger();
         final AtomicInteger onCompleteCounter = new AtomicInteger();
         final CountDownLatch latch = new CountDownLatch(3 + ((args >= 3) ? 1 : 0));
-        final CompletableFuture<StringBuilder> future =
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future =
                 subscribeSingleFuture(args, flowableWithSingle, onNextCounter, onErrorCounter, onCompleteCounter,
                         latch);
         assertTimeout(Duration.ofMillis(100), () -> assertEquals("single", future.get().toString()));
@@ -635,7 +637,7 @@ class FlowableWithSingleTest {
         final AtomicInteger onErrorCounter = new AtomicInteger();
         final AtomicInteger onCompleteCounter = new AtomicInteger();
         final CountDownLatch latch = new CountDownLatch(3 + ((args >= 3) ? 1 : 0));
-        final CompletableFuture<StringBuilder> future =
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future =
                 subscribeSingleFuture(args, flowableWithSingle, onNextCounter, onErrorCounter, onCompleteCounter,
                         latch);
         final ExecutionException executionException = assertThrows(ExecutionException.class,
@@ -672,7 +674,7 @@ class FlowableWithSingleTest {
         final AtomicInteger onErrorCounter = new AtomicInteger();
         final AtomicInteger onCompleteCounter = new AtomicInteger();
         final CountDownLatch latch = new CountDownLatch((args >= 2) ? 1 : 0);
-        final CompletableFuture<StringBuilder> future =
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future =
                 subscribeSingleFuture(args, flowableWithSingle, onNextCounter, onErrorCounter, onCompleteCounter,
                         latch);
         final ExecutionException executionException = assertThrows(ExecutionException.class,
@@ -716,7 +718,7 @@ class FlowableWithSingleTest {
         final FlowableWithSingle<String, StringBuilder> flowableWithSingle =
                 new FlowableWithSingleSplit<>(flowable, String.class, StringBuilder.class);
 
-        final CompletableFuture<StringBuilder> future = flowableWithSingle.subscribeSingleFuture();
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future = flowableWithSingle.subscribeSingleFuture();
         assertTrue(subscribeLatch.await(100, TimeUnit.MILLISECONDS));
         future.cancel(false);
         cancelLatch.countDown();
@@ -744,7 +746,7 @@ class FlowableWithSingleTest {
         final FlowableWithSingle<String, StringBuilder> flowableWithSingle =
                 new FlowableWithSingleSplit<>(flowable, String.class, StringBuilder.class);
 
-        final CompletableFuture<StringBuilder> future = flowableWithSingle.subscribeSingleFuture();
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future = flowableWithSingle.subscribeSingleFuture();
         assertTimeout(Duration.ofMillis(100), () -> assertEquals("single", future.get().toString()));
         future.cancel(false);
         cancelLatch.countDown();
@@ -774,7 +776,7 @@ class FlowableWithSingleTest {
                 new FlowableWithSingleSplit<>(flowable, String.class, StringBuilder.class);
 
         final CountDownLatch onNextLatch = new CountDownLatch(1);
-        final CompletableFuture<StringBuilder> future =
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future =
                 flowableWithSingle.subscribeSingleFuture(s -> onNextLatch.countDown());
         assertTimeout(Duration.ofMillis(100), () -> assertEquals("single", future.get().toString()));
         assertTrue(onNextLatch.await(100, TimeUnit.MILLISECONDS));
@@ -812,7 +814,7 @@ class FlowableWithSingleTest {
         final FlowableWithSingle<String, StringBuilder> flowableWithSingle =
                 new FlowableWithSingleSplit<>(flowable, String.class, StringBuilder.class);
 
-        final CompletableFuture<StringBuilder> future = flowableWithSingle.subscribeSingleFuture();
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future = flowableWithSingle.subscribeSingleFuture();
         future.cancel(false);
         cancelLatch.countDown();
         assertTrue(completeLatch.await(100, TimeUnit.MILLISECONDS));
@@ -841,7 +843,7 @@ class FlowableWithSingleTest {
         final FlowableWithSingle<String, StringBuilder> flowableWithSingle =
                 new FlowableWithSingleSplit<>(flowable, String.class, StringBuilder.class);
 
-        final CompletableFuture<StringBuilder> future =
+        final java9.util.concurrent.CompletableFuture<StringBuilder> future =
                 flowableWithSingle.subscribeSingleFuture(new Subscriber<String>() {
                     @Override
                     public void onSubscribe(final @NotNull Subscription s) {
@@ -864,7 +866,7 @@ class FlowableWithSingleTest {
         assertThrows(CancellationException.class, future::get);
     }
 
-    private @NotNull CompletableFuture<StringBuilder> subscribeSingleFuture(
+    private @NotNull java9.util.concurrent.CompletableFuture<StringBuilder> subscribeSingleFuture(
             final int args,
             final @NotNull FlowableWithSingle<String, StringBuilder> flowableWithSingle,
             final @NotNull AtomicInteger onNextCounter,
@@ -931,7 +933,7 @@ class FlowableWithSingleTest {
         }
     }
 
-    private @NotNull CompletableFuture<StringBuilder> subscribeSingleFuture(
+    private @NotNull java9.util.concurrent.CompletableFuture<StringBuilder> subscribeSingleFuture(
             final int args,
             final @NotNull FlowableWithSingle<String, StringBuilder> flowableWithSingle,
             final @NotNull AtomicInteger onNextCounter,

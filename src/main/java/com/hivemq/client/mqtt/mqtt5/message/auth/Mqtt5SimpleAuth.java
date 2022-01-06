@@ -22,7 +22,7 @@ import com.hivemq.client.mqtt.datatypes.MqttUtf8String;
 import org.jetbrains.annotations.NotNull;
 
 import java.nio.ByteBuffer;
-import java.util.Optional;
+import java9.util.Optional;
 
 /**
  * Simple authentication and/or authorization related data in an {@link com.hivemq.client.mqtt.mqtt5.message.connect.Mqtt5Connect

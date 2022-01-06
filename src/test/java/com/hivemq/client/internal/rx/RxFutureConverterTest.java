@@ -23,7 +23,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import java.util.Optional;
+import java9.util.Optional;
+import java9.util.concurrent.CompletableFuture;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 

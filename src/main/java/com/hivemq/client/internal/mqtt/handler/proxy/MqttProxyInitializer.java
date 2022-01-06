@@ -21,8 +21,8 @@ import com.hivemq.client.internal.mqtt.MqttProxyConfigImpl;
 import io.netty.channel.Channel;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
+import java9.util.function.BiConsumer;
+import java9.util.function.Consumer;
 
 /**
  * @author Silvio Giebl

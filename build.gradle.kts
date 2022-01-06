@@ -77,6 +77,8 @@ dependencies {
     implementation("org.jctools:jctools-core:${property("jctools.version")}")
     implementation("org.jetbrains:annotations:${property("annotations.version")}")
     implementation("com.google.dagger:dagger:${property("dagger.version")}")
+    implementation ("net.sourceforge.streamsupport:android-retrostreams:1.7.4")
+    implementation ("net.sourceforge.streamsupport:android-retrofuture:1.7.4")
 
     compileOnly("org.slf4j:slf4j-api:${property("slf4j.version")}")
 

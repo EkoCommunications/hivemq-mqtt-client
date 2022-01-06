@@ -25,7 +25,8 @@ import com.hivemq.client.mqtt.mqtt3.message.Mqtt3MessageType;
 import org.jetbrains.annotations.NotNull;
 
 import java.nio.ByteBuffer;
-import java.util.Optional;
+
+import java9.util.Optional;
 
 /**
  * MQTT 3 Publish message. This message is translated from and to an MQTT 3 PUBLISH packet.

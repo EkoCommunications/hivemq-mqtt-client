@@ -30,8 +30,8 @@ import org.jetbrains.annotations.Nullable;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.util.NoSuchElementException;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
+import java9.util.function.BiConsumer;
+import java9.util.function.Consumer;
 
 /**
  * @author Silvio Giebl

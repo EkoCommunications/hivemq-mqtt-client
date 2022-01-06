@@ -33,7 +33,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
-import java.util.Optional;
+
+import java9.lang.Longs;
+import java9.util.Optional;
 
 /**
  * @author Silvio Giebl
@@ -186,11 +188,11 @@ public class MqttConnect extends MqttMessageWithUserProperties implements Mqtt5C
         int result = partialHashCode();
         result = 31 * result + keepAlive;
         result = 31 * result + Boolean.hashCode(cleanStart);
-        result = 31 * result + Long.hashCode(sessionExpiryInterval);
+        result = 31 * result + Longs.hashCode(sessionExpiryInterval);
         result = 31 * result + restrictions.hashCode();
-        result = 31 * result + Objects.hashCode(simpleAuth);
-        result = 31 * result + Objects.hashCode(enhancedAuthMechanism);
-        result = 31 * result + Objects.hashCode(willPublish);
+        result = 31 * result + java9.util.Objects.hashCode(simpleAuth);
+        result = 31 * result + java9.util.Objects.hashCode(enhancedAuthMechanism);
+        result = 31 * result + java9.util.Objects.hashCode(willPublish);
         return result;
     }
 }

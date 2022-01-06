@@ -21,7 +21,7 @@ import com.hivemq.client.internal.mqtt.message.publish.pubrec.MqttPubRec;
 import com.hivemq.client.internal.mqtt.message.publish.pubrel.MqttPubRel;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.function.BooleanSupplier;
+import java9.util.function.BooleanSupplier;
 
 /**
  * @author Silvio Giebl

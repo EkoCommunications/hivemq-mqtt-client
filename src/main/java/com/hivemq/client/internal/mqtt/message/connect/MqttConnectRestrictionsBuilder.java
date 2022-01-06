@@ -22,7 +22,7 @@ import com.hivemq.client.mqtt.mqtt3.message.connect.Mqtt3ConnectRestrictionsBuil
 import com.hivemq.client.mqtt.mqtt5.message.connect.Mqtt5ConnectRestrictionsBuilder;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.function.Function;
+import java9.util.function.Function;
 
 /**
  * @author Silvio Giebl

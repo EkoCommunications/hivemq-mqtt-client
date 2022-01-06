@@ -26,7 +26,8 @@ import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
-import java.util.stream.Stream;
+import java9.util.stream.Stream;
+import java9.util.stream.StreamSupport;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
@@ -281,7 +282,7 @@ class MqttSubscribeBuilderTest {
         subscriptions.add("subscriptions");
 
         final Mqtt5Subscribe subscribe = Mqtt5Subscribe.builder()
-                .addSubscriptions(subscriptions.stream()
+                .addSubscriptions(StreamSupport.stream(subscriptions)
                         .map(topicFilter -> Mqtt5Subscription.builder()
                                 .topicFilter(topicFilter)
                                 .qos(MqttQos.AT_LEAST_ONCE)

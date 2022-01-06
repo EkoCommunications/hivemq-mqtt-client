@@ -36,8 +36,8 @@ import reactor.util.context.Context;
 import java.util.NoSuchElementException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.function.Consumer;
-import java.util.function.Function;
+import java9.util.function.Consumer;
+import java9.util.function.Function;
 
 /**
  * A {@link Flux} which emits a flow of items of type <code>F</code> and a single item of type <code>S</code>.

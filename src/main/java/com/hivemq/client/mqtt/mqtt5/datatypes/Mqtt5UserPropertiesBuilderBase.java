@@ -22,7 +22,7 @@ import com.hivemq.client.mqtt.datatypes.MqttUtf8String;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
-import java.util.stream.Stream;
+import java9.util.stream.Stream;
 
 /**
  * Builder base for {@link Mqtt5UserProperties}.
